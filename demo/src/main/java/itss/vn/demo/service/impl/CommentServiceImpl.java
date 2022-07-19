@@ -1,5 +1,6 @@
 package itss.vn.demo.service.impl;
 
+import itss.vn.demo.dto.CommentDTO;
 import itss.vn.demo.entity.Comment;
 import itss.vn.demo.mapper.CommentMapper;
 import itss.vn.demo.repository.CommentRepository;
@@ -21,6 +22,12 @@ public class CommentServiceImpl extends BaseServiceImpl<Comment, Long> implement
     @Override
     public Comment save(Comment entity) {
         return super.save(entity);
+    }
+
+    @Override
+    public List<CommentDTO> getAllUserComment() {
+        List<CommentDTO> commentDtoList = commentRepository.getAllUserComment();
+        return commentDtoList;
     }
 
     @Override

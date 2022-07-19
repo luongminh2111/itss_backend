@@ -14,9 +14,11 @@ import java.time.Instant;
 @Getter
 @Setter
 public class CommentDTO {
+    private String username;
     private Long id;
     private Long userId;
     private Long reviewId;
     private String content;
     private Instant createdDate;
+
 }
