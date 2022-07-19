@@ -29,6 +29,18 @@ public class UserServiceImpl extends BaseServiceImpl<User, Long> implements User
     }
 
     @Override
+    public User getUserById(Long id) {
+        User user = userRepository.getUserById(id);
+        return user;
+    }
+
+    @Override
+    public User getUserByUsernameAndPassword(String username, String password) {
+        User user = userRepository.getUserByUsernameAndPassword(username, password);
+        return user;
+    }
+
+    @Override
     public List<User> getAll() {
         return super.getAll();
     }

@@ -22,6 +22,12 @@ public class ReviewServiceImpl extends BaseServiceImpl<Review, Long> implements 
     }
 
     @Override
+    public List<Review> findAllOrAndOrderById() {
+        List<Review> reviewList= reviewRepository.findAllOrAndOrderById();
+        return reviewList;
+    }
+
+    @Override
     public Review save(Review entity) {
         return super.save(entity);
     }

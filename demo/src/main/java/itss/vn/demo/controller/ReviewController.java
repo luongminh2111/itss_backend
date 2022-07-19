@@ -23,7 +23,7 @@ public class ReviewController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Review>> getAllReview (){
-        var review = reviewService.getAll();
+        var review = reviewService.findAllOrAndOrderById();
         return ResponseEntity.ok(review);
     }
 
