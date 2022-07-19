@@ -34,7 +34,7 @@ public class CommentController {
             for ( int j = 0 ; j < userList.size() ; j++){
                 if(comments.get(i).getUserId() == userList.get(j).getId()){
                     CommentDTO commentDTO = new CommentDTO(userList.get(j).getUsername(), comments.get(i).getId(),
-                            comments.get(i).getReviewId(), comments.get(i).getUserId(), comments.get(i).getContent(),
+                            comments.get(i).getUserId(),comments.get(i).getReviewId(),  comments.get(i).getContent(),
                             comments.get(i).getCreatedDate());
                     commentDTOList.add(commentDTO);
                 }
